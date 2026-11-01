@@ -4,7 +4,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="pt-BR">
 	<head>
 		<title>Hyperspace by HTML5 UP</title>
 		<meta charset="utf-8" />
@@ -19,10 +19,10 @@
 				<div class="inner">
 					<nav>
 						<ul>
-							<li><a href="#intro">Página inicial</a></li>
-							<li><a href="#one">Quem somos</a></li>
-							<li><a href="#two">Comentários dos desenvolvedores</a></li>
-							<li><a href="#three">Contato</a></li>
+							<li><a href="#intro" data-i18n="nav.home">Página inicial</a></li>
+							<li><a href="#one" data-i18n="nav.about">Quem somos</a></li>
+							<li><a href="#two" data-i18n="nav.comments">Comentários dos desenvolvedores</a></li>
+							<li><a href="#three" data-i18n="nav.contact">Contato</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -35,16 +35,18 @@
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
 							<h1>Vislumbre</h1>
-							<p>O Vislumbre é um programa de compartilhamento de tela em que você pode 
-								desenhar na tela de quem estiver compartilhando. O programa funciona em redes lan.</p>
-								<p>O vislumbre vem em um arquivo .zip e só é necessário extrair e execultar o Vislumbre.exe.</p>
-							<ul class="actions special">
-								<li><a href="https://github.com/AndradiusV/Vislumbre-Compilado/archive/refs/heads/main.zip" class="button">Baixar Vislumbre</a></li>
+							<ul class="actions">
+								<li><button type="button" class="button small" id="language-toggle" aria-label="Mudar idioma para inglês">English</button></li>
 							</ul>
-							<p>Caso queria fazer algua alteração, abaixo estão as versões do projeto da Unity e o AudioCatcher em arquivos .zip. Os dois descompilados estão disponíveis para uso livre. Em outras palavras, faça o que quiser com isso.</p>
+							<p data-i18n="intro.description">O Vislumbre é um programa de compartilhamento de tela que permite desenhar na tela de quem está compartilhando. O programa funciona em redes locais (LAN).</p>
+								<p data-i18n="intro.download">O Vislumbre é distribuído em um arquivo .zip. Basta extraí-lo e executar o arquivo Vislumbre.exe.</p>
+							<ul class="actions special">
+								<li><a href="https://github.com/AndradiusV/Vislumbre-Compilado/archive/refs/heads/main.zip" class="button primary" data-i18n="intro.downloadButton">Baixar Vislumbre</a></li>
+							</ul>
+							<p data-i18n="intro.source">Caso queira fazer alterações, disponibilizamos abaixo os projetos da Unity e do AudioCatcher em arquivos .zip. Ambos estão disponíveis para uso livre. Fique à vontade para utilizá-los e modificá-los.</p>
 							<ul class="actions special fixed">
-								<li><a href="https://github.com/AndradiusV/Vislumbre-Projeto-/archive/refs/heads/main.zip" class="button">Projeto da Unity</a></li>
-								<li><a href="https://github.com/AndradiusV/AudioCatcher/archive/refs/heads/main.zip" class="button">AudioCatcher</a></li>
+								<li><a href="https://github.com/AndradiusV/Vislumbre-Projeto-/archive/refs/heads/main.zip" class="button" data-i18n="intro.unity">Projeto da Unity</a></li>
+								<li><a href="https://github.com/AndradiusV/AudioCatcher/archive/refs/heads/main.zip" class="button" data-i18n="intro.audioCatcher">AudioCatcher</a></li>
 							</ul>
 						</div>
 					</section>
@@ -56,7 +58,7 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Flarique</h2>
-									<p>Sou eu! foi mim que fez quase tudo. Também tenho um canal minúsculo lá no Youtube. dá uma zoiadinha :3</p>
+									<p data-i18n="about.flarique">Sou o principal responsável pelo desenvolvimento do projeto. Também tenho um canal no YouTube; fique à vontade para conhecê-lo.</p>
 									<ul class="actions">
 										<li><a href="https://www.youtube.com/@flariquee" class="button">Learn more</a></li>
 									</ul>
@@ -68,8 +70,7 @@
 							<div class="content">
 								<div class="inner">
 									<h2>L. Fallen Yokai B.A.</h2>
-									<p> L.Fallen é um grande amigo meu que não é propriamente um artista, mas eu peço para ele fazer alguns desenhos e ele faz.
-										Nunca paguei um centavo para ele, mas eu pago ele com muito amor. L. Fallen - "Eu não sou artistas eu sou doido"</p>
+									<p data-i18n="about.fallen">L. Fallen é um grande amigo. Embora não seja propriamente um artista, ele sempre faz o que eu preciso. Nunca paguei um centavo, mas eu pago com muito amor. — L. Fallen: “Não sou artista; sou doido.”</p>
 									<ul class="actions">
 										<li><a href="generic.html" class="button">Learn more</a></li>
 									</ul>
@@ -81,38 +82,38 @@
 				<!-- Seção acessada pelo link "Comentários dos desenvolvedores" do menu. -->
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
-							<h2>Comentários dos desenvolvedores</h2>
-							<p>Sei que eu fui o desenvolvedor pricipal, porem achei que seria legal deixar aqui alguns comentários das pessoas que foram testando o programa comigo.</p>
+							<h2 data-i18n="comments.heading">Comentários dos desenvolvedores</h2>
+							<p data-i18n="comments.intro">Embora eu tenha sido o principal desenvolvedor, achei interessante compartilhar alguns comentários das pessoas que testaram o programa comigo.</p>
 							<div class="features">
 								<section>
 									<span class="icon solid major fa-code"></span>
 									<h3>Flarique</h3>
-									<p>Fazer esse programa me deu tanta dor de cabeça, mas ter completado algo feito por mim que niguém nunca vai poder tirar de mim foi uma grande realização. Foi divertido estar testando e jogando jogos tatics com meus amigos.</p>
+									<p data-i18n="comments.flarique">O desenvolvimento deste programa me deu bastante trabalho, mas concluir um projeto criado por mim foi uma grande realização. Foi divertido testá-lo e jogar jogos táticos com meus amigos.</p>
 								</section>
 								<section>
 									<span class="icon major fa-gem"></span>
 									<h3>L. Fallen Yokai B.A.</h3>
-									<p> ADicionar</p>
+									<p data-i18n="comments.toBeAdded">Comentário em breve.</p>
 								</section>
 								<section>
 									<span class="icon solid major fa-cog"></span>
 									<h3>Flarique</h3>
-									<p>Durante a produção eu pretendia fazer alguams coisas a mais do que as que acabaram saindo na primeira versão pública. Uma dessas coisas era poder compartilhar imagens e videos! Eu até sei como fazer, mas eu to com uma preguiça</p>
+									<p data-i18n="comments.production">Durante o desenvolvimento, planejei incluir alguns recursos que não chegaram à primeira versão pública. Um deles era o compartilhamento de imagens e vídeos. Sei como implementá-lo, mas ainda não tive disposição para fazê-lo.</p>
 								</section>
 								<section>
 									<span class="icon solid major fa-desktop"></span>
-									<h3>Veroeros quis lorem</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<h3 data-i18n="comments.placeholderHeading1">GPT</h3>
+									<p data-i18n="comments.placeholder1">.</p>
 								</section>
 								<section>
 									<span class="icon solid major fa-link"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<h3 data-i18n="comments.placeholderHeading2">Urna quis bibendum</h3>
+									<p data-i18n="comments.placeholder2">Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
 								</section>
 								<section>
 									<span class="icon solid major fa-lock"></span>
-									<h3>Aliquam urna dapibus</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<h3 data-i18n="comments.placeholderHeading3">Aliquam urna dapibus</h3>
+									<p data-i18n="comments.placeholder3">Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
 								</section>
 							</div>
 							<ul class="actions">
@@ -124,16 +125,17 @@
 				<!-- Contato: introdução, botão para o Google Forms e links das redes sociais. -->
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="inner align-center">
-							<h2>Contato</h2>
-							<p>Quer falar comigo? Envie uma mensagem pelo formulário ou acompanhe meu trabalho nas redes sociais.</p>
+							<h2 data-i18n="contact.heading">Contato</h2>
+							<p data-i18n="contact.description">Para entrar em contato, envie uma mensagem pelo formulário ou acompanhe meu trabalho nas redes sociais.</p>
 							<ul class="actions special">
-								<li><a href="https://forms.gle/1MeQWCbX4FH6aM7E6" class="button">Enviar uma mensagem</a></li>
+								<li><a href="https://forms.gle/1MeQWCbX4FH6aM7E6" class="button" data-i18n="contact.message">Enviar uma mensagem</a></li>
 							</ul>
-							<h3>Redes sociais</h3>
+							<h3 data-i18n="contact.social">Redes sociais</h3>
 							<ul class="icons">
 								<li><a href="https://github.com/AndradiusV?tab=repositories" class="icon brands fa-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><span class="label">GitHub</span></a></li>
 								<li><a href="https://www.youtube.com/@flariquee" class="icon brands fa-youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><span class="label">YouTube</span></a></li>
 								<li><a href="https://x.com/_flarique" class="icon brands fa-twitter" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.patreon.com/cw/Flarique" class="icon brands fa-patreon" target="_blank" rel="noopener noreferrer" aria-label="Patreon"><span class="label">Patreon</span></a></li>
 								<li><a href="www.linkedin.com/in/enrique-barbosa-9761831a1" class="icon brands fa-linkedin-in" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><span class="label">LinkedIn</span></a></li>
 							</ul>
 						</div>
@@ -158,6 +160,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/language.js"></script>
 
 	</body>
 </html>
