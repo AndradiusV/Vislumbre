@@ -72,6 +72,23 @@
 				background-color: rgba(0,0,0,0.1);
 			}
 
+			&.flarique {
+				background-color: #000;
+
+				h2 {
+					color: #b6ffb6;
+				}
+			}
+
+			&.fallen {
+				background-color: #d4af37;
+				color: #1a1608;
+
+				h2 {
+					color: #1a1608;
+				}
+			}
+
 			&.inactive,
 			body.is-preload & {
 				> .image {
@@ -128,4 +145,3 @@
 			}
 		}
 	}
-

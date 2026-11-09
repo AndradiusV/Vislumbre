@@ -3071,6 +3071,23 @@ input, select, textarea {
 			background-color: rgba(0, 0, 0, 0.1);
 		}
 
+		.spotlights > section.flarique {
+			background-color: #000;
+		}
+
+			.spotlights > section.flarique h2 {
+				color: #08ff08;
+			}
+
+		.spotlights > section.fallen {
+			background-color: #d4af37;
+			color: #1a1608;
+		}
+
+			.spotlights > section.fallen h2 {
+				color: #1a1608;
+			}
+
 		.spotlights > section.inactive > .image:before,
 		body.is-preload .spotlights > section > .image:before {
 			opacity: 1;
