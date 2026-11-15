@@ -1,4 +1,5 @@
-
+Este é o site do Vislumbre, aqui tem todos os arquivos que podem ser baixados pelos usuários, além de ter toda estrutura do site.
+essa estrutura não foi feita por mim, segue os créditos no final do README.
 
 
 Credits:
