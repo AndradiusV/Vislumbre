@@ -56,6 +56,12 @@ Source: "C:\Users\enrib\OneDrive\Documentos\GitHub\Vislumbre\Vislumbre_Compilado
 Source: "C:\Users\enrib\OneDrive\Documentos\GitHub\Vislumbre\Vislumbre_Compilado\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files.
 
+; Requisito 64-bit (só extrai se o Windows for 64 bits)
+Source: "C:\Users\enrib\OneDrive\Documentos\GitHub\Vislumbre\Vislumbre_Installer\windowsdesktop-runtime-9.0.23-win-x64.exe"; DestDir: "{tmp}"; Flags: deleteafterinstall; Check: IsWin64
+
+; Requisito 32-bit / x86 (só extrai se o Windows NÃO for 64 bits)
+Source: "C:\Users\enrib\OneDrive\Documentos\GitHub\Vislumbre\Vislumbre_Installer\windowsdesktop-runtime-9.0.23-win-x86.exe"; DestDir: "{tmp}"; Flags: deleteafterinstall; Check: not IsWin64
+
 [Registry]
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocExt}\OpenWithProgids"; ValueType: string; ValueName: "{#MyAppAssocKey}"; ValueData: ""; Flags: uninsdeletevalue
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}"; ValueType: string; ValueName: ""; ValueData: "{#MyAppAssocName}"; Flags: uninsdeletekey
@@ -68,3 +74,8 @@ Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: de
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#DoubleAmp(MyAppName)}}"; Flags: nowait postinstall skipifsilent
+; Executa a versão 64 bits se o Windows for 64 bits
+Filename: "{tmp}\windowsdesktop-runtime-9.0.23-win-x64.exe"; Parameters: "/SILENT"; StatusMsg: "Instalando requisito (64-bit)..."; Flags: waituntilterminated; Check: IsWin64
+
+; Executa a versão 32 bits se o Windows for 32 bits
+Filename: "{tmp}\windowsdesktop-runtime-9.0.23-win-x86.exe"; Parameters: "/SILENT"; StatusMsg: "Instalando requisito (32-bit)..."; Flags: waituntilterminated; Check: not IsWin64
